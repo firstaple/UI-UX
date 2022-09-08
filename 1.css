@@ -1,0 +1,102 @@
+.layout {
+  border: 3px solid black;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 5px;
+}
+.header {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.header {
+  color: white;
+  text-align: center;
+  background-color: darkblue;
+  margin: 0;
+  padding: 0 0 30px 0;
+}
+.nav {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 0;
+}
+.nav li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav a:hover {
+  color: white;
+  text-shadow: 1px 1px 1px gray;
+}
+.video {
+  grid-column: 1/2;
+  grid-row: 3/5;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.video iframe {
+  margin: 20px 20px 0 20px;
+}
+
+.banner-box {
+  background-color: rgba(128, 128, 128, 0.179);
+  height: 200px;
+  margin: 20px;
+}
+.news {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.news h3 {
+  margin: 20px;
+  border-bottom: 3px solid rgba(255, 0, 0, 0.291);
+  border-bottom-style: dotted;
+}
+.news p {
+  margin: 20px;
+}
+.important {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+.important h3 {
+  margin: 20px;
+  border-bottom: 3px solid rgba(255, 0, 0, 0.291);
+  border-bottom-style: dotted;
+}
+.important a {
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+}
+.important a::after {
+  display: inline-block;
+  content: "N";
+  text-align: center;
+  background-color: rgb(53, 92, 163);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  margin-left: 3px;
+}
+.number {
+  background-color: rgba(128, 128, 128, 0.179);
+  grid-column: 1/3;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .layout {
+    display: block;
+  }
+}
